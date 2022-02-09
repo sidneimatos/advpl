@@ -45,15 +45,15 @@ Private aBBase := {;
 
   DEFINE MSDIALOG oDlg TITLE "Tic Tac Toe" FROM 000, 000  TO 260, 270 COLORS 0, 16777215 PIXEL
 
-    @ 013, 009 BUTTON oBtn1 prompt cBtn1 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(@aBoard,1)
-    @ 013, 047 BUTTON obtn2 prompt cBtn2 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(@aBoard,2)   
-    @ 013, 084 BUTTON oBtn3 prompt cBtn3 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(@aBoard,3)  
-    @ 046, 009 BUTTON oBtn4 prompt cBtn4 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(@aBoard,4)
-    @ 046, 047 BUTTON oBtn5 prompt cBtn5 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(@aBoard,5)  
-    @ 046, 084 BUTTON oBtn6 prompt cBtn6 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(@aBoard,6)  
-    @ 079, 009 BUTTON oBtn7 prompt cBtn7 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(@aBoard,7)  
-    @ 079, 047 BUTTON oBtn8 prompt cBtn8 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(@aBoard,8)  
-    @ 079, 084 BUTTON oBtn9 prompt cBtn9 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(@aBoard,9)  
+    @ 013, 009 BUTTON oBtn1 prompt cBtn1 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(1)
+    @ 013, 047 BUTTON obtn2 prompt cBtn2 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(2)   
+    @ 013, 084 BUTTON oBtn3 prompt cBtn3 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(3)  
+    @ 046, 009 BUTTON oBtn4 prompt cBtn4 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(4)
+    @ 046, 047 BUTTON oBtn5 prompt cBtn5 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(5)  
+    @ 046, 084 BUTTON oBtn6 prompt cBtn6 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(6)  
+    @ 079, 009 BUTTON oBtn7 prompt cBtn7 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(7)  
+    @ 079, 047 BUTTON oBtn8 prompt cBtn8 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(8)  
+    @ 079, 084 BUTTON oBtn9 prompt cBtn9 SIZE 037, 033 OF oDlg PIXEL FONT oFont1 PIXEL action MoveXO(9)  
 
 
   ACTIVATE MSDIALOG oDlg CENTERED
@@ -80,7 +80,7 @@ next x
 
 RETURN
 
-Static function MoveXO(aBoard,nPos)
+Static function MoveXO(nPos)
 Local cMov      :=0
 Local cmsg      :=""
 Local i         :=0
